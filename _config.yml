@@ -1,0 +1,51 @@
+---
+booktitle: Proceedings of The 2nd International Conference on Predictive APIs and
+  Apps
+shortname: PAPIs 2015
+year: '2016'
+volume: 50
+published: 2016-06-05
+start: 2015-08-06
+end: 2015-08-07
+sections:
+- name: preface
+  title: Preface
+- name: default
+  title: Accepted Papers
+layout: proceedings
+series: Proceedings of Machine Learning Research
+id: PAPIs-2015
+month: 0
+abstract: ''
+editor:
+- given: Louis
+  family: Dorard
+- given: Mark D.
+  family: Reid
+- given: Francisco J.
+  family: Martin
+title: Proceedings of The 2nd International Conference on Predictive APIs and Apps
+email: ''
+description: Proceedings of The 2nd International Conference on Predictive APIs and
+  Apps, Sydney, Australia
+url: http://proceedings.mlr.press
+baseurl: "/v50"
+twitter_username: mlresearch
+github_username: mlresearch
+markdown: kramdown
+permalink: "/:title.html"
+github:
+  edit: true
+  repository: v50
+conference:
+  name: Conference on Predictive APIs and Apps
+  url: http://www.papis.io/2015/
+  location: Sydney, Australia
+  dates:
+  - 2015-08-06
+  - 2015-08-07
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+# Site settings
+# Auto generated from v50.bib

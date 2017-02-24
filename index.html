@@ -1,180 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>PAPIs 2015 2016 | JMLR W&amp;CP</title>
+---
+layout: default
+---
 
-	<!-- Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../css/jmlr.css" />
+<div id="content" class="home">
 
-	<!-- Fixed position navigation -->
-	<!--#include virtual="/proceedings/css-scroll.txt"-->
+  <h1>Proceedings of Machine Learning Research</h1>
+  <h2>Volume {{ site.volume }}: {{ site.conference.name }}, {{ site.conference.dates.first | date: "%B %-d" }} to {{ site.conference.dates.last | date: "%B %-d, %Y" }}, {{ site.conference.location }}</h2>
+  {% if site.github.edit %}
+  <p align="right">[<a href="https://github.com/{{ site.github_username }}/{% if site.github.repository %}{{ site.github.repository }}{% else %}{{ site.baseurl }}{% endif %}/edit/{% if site.github.repository contains 'github.io' %}master{% else %}gh-pages{% endif %}/_config.yml">edit</a>]</p>
+  {% endif %}
 
-	<!-- MathJax -->
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+  <p><strong>Editors:
+      {% assign lastone = site.editor | last %}
+      {% for person in site.editor %}
+      {% include listperson.html %}
+      {% endfor %}
+  </strong></p>
+  <p>[<a href="./bibliography.bib">bib</a>][<a href="./citeproc.yaml">citeproc</a>]</p>
+  <div id="sectionnav">
+    {% if site.sections %}
+    <p>Contents:</p>
+    <ul>
+      {% for section in site.sections %}
+      <li><a href="#{{ section.name }}">{{ section.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <label for="search-authors">Filter Authors:</label>
+    <input type="search" name="filter-authors" id="search-authors" value />
+    <label for="search-titles">Filter Titles:</label>
+    <input type="search" name="filter-titles" id="search-titles" value />
+  </div>
+  {% if site.sections %}
+  {% for section in site.sections %}
+  <h3 id="{{ section.name }}">{{ section.title }}</h3>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+    {% if section.name == post.section %}
+    {% include listpaper.html %}
+    {% endif %}
+    {% endfor %}
+  </dl>
+  {% endfor %}
+  {% endif %}
+  <dl>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+  {% unless post.section %} 
+  {% include listpaper.html %}
+  {% endunless %}
+  {% endfor %}
 
-
-</head>
-<body>
-
-<div id="fixed">
-<!--#include virtual="/proceedings/nav-bar.txt"-->
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  
 </div>
-
-<div id="content">
-	<h1>JMLR Workshop and Conference Proceedings</h1>
-	<h2>Volume 50: Proceedings of The 2nd International Conference on Predictive APIs and Apps</h2>
-
-	<p><strong>Editors: 
-	
-		Louis Dorard,
-	
-		Mark D. Reid,
-	
-		Francisco J. Martin
-    </strong>
-	
-	</p>
-
-	
-
-	<div id="sectionnav">
-		<p>Contents:</p>
-		<ul>
-		
-			<li><a href="#preface">Preface</a></li>
-		
-			<li><a href="#default">Accepted Papers</a></li>
-		
-		</ul>
-
-		<label for="search-authors">Filter Authors:</label>
-		<input type="search" name="filter-authors" id="search-authors" value />
-		<label for="search-titles">Filter Titles:</label>
-		<input type="search" name="filter-titles" id="search-titles" value />
-	</div>
-
-	
-	<h3 id="preface">Preface</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">Preface</p>
-	<p class="details">
-	<span class="authors">
-		
-			Louis Dorard,
-		
-			Mark D. Reid,
-		
-			Francisco J. Martin
-	</span>
-	</p>
-	<p class="links">
-		[<a href="preface.html">abs</a>]
-		[<a href="preface.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-	<h3 id="default">Accepted Papers</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">AzureML: Anatomy of a machine learning service</p>
-	<p class="details">
-	<span class="authors">
-		
-			AzureML Team
-	</span>
-	</p>
-	<p class="links">
-		[<a href="azureml15.html">abs</a>]
-		[<a href="azureml15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Deploying high throughput predictive models with the actor framework</p>
-	<p class="details">
-	<span class="authors">
-		
-			Brian Gawalt
-	</span>
-	</p>
-	<p class="links">
-		[<a href="gawalt15.html">abs</a>]
-		[<a href="gawalt15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Protocols and Structures for Inference: A RESTful API for Machine Learning</p>
-	<p class="details">
-	<span class="authors">
-		
-			James Montgomery,
-		
-			Mark D. Reid,
-		
-			Barry Drake
-	</span>
-	</p>
-	<p class="links">
-		[<a href="montgomery15.html">abs</a>]
-		[<a href="montgomery15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">The Past, Present, and Future of Machine Learning APIs</p>
-	<p class="details">
-	<span class="authors">
-		
-			Atakan Cetinsoy,
-		
-			Francisco J. Martin,
-		
-			José Antonio Ortega,
-		
-			Poul Petersen
-	</span>
-	</p>
-	<p class="links">
-		[<a href="cetinsoy15.html">abs</a>]
-		[<a href="cetinsoy15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-
-</div> <!-- content -->
-	<!-- Search Widget -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="../js/search.js"></script>
-</body>
-</html>
+<!-- Search Widget -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="../js/search.js"></script>
