@@ -24,10 +24,21 @@ editor:
   family: Reid
 - given: Francisco J.
   family: Martin
-title: Proceedings of The 2nd International Conference on Predictive APIs and Apps
-email: ''
-description: Proceedings of The 2nd International Conference on Predictive APIs and
-  Apps, Sydney, Australia
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of The 2nd International Conference on Predictive APIs and Apps
+    Held in Sydney, Australia on 6-07 August 2015
+
+  Published as Volume 50 by the Proceedings of Machine Learning Research on 05 June 2016.
+
+  Volume Edited by:
+    Louis Dorard
+    Mark D. Reid
+    Francisco J. Martin
+
+  Series Editors:
+    Neil D. Lawrence
+    Mark Reid
 url: http://proceedings.mlr.press
 baseurl: "/v50"
 twitter_username: mlresearch
@@ -37,6 +48,7 @@ permalink: "/:title.html"
 github:
   edit: true
   repository: v50
+email: ''
 conference:
   name: Conference on Predictive APIs and Apps
   url: http://www.papis.io/2015/
