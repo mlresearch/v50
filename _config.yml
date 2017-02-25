@@ -28,7 +28,7 @@ editor:
   family: Martin
 description: |
   Proceedings of The 2nd International Conference on Predictive APIs and Apps
-    Held in Sydney, Australia on 6-07 August 2015
+    Held in Sydney, Australia on 06-07 August 2015
 
   Published as Volume 50 by the Proceedings of Machine Learning Research on 05 June 2016.
 
@@ -40,7 +40,7 @@ description: |
   Series Editors:
     Neil D. Lawrence
     Mark Reid
-date_str: 6--07 Aug
+date_str: 06--07 Aug
 url: http://proceedings.mlr.press
 baseurl: "/v50"
 twitter_username: mlresearch
