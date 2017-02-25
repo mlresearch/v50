@@ -40,6 +40,7 @@ description: |
   Series Editors:
     Neil D. Lawrence
     Mark Reid
+date_str: 6--07 Aug
 url: http://proceedings.mlr.press
 baseurl: "/v50"
 twitter_username: mlresearch
@@ -49,6 +50,7 @@ permalink: "/:title.html"
 github:
   edit: true
   repository: v50
+bibtex_copy: true
 email: ''
 conference:
   name: Conference on Predictive APIs and Apps
