@@ -17,6 +17,8 @@ series: Proceedings of Machine Learning Research
 id: PAPIs-2015
 month: 0
 abstract: ''
+tex_title: 
+title: Proceedings of Machine Learning Research
 editor:
 - given: Louis
   family: Dorard
@@ -24,7 +26,6 @@ editor:
   family: Reid
 - given: Francisco J.
   family: Martin
-title: Proceedings of Machine Learning Research
 description: |
   Proceedings of The 2nd International Conference on Predictive APIs and Apps
     Held in Sydney, Australia on 6-07 August 2015
